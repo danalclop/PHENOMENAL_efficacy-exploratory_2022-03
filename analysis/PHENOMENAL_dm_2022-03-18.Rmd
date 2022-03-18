@@ -1,0 +1,61 @@
+---
+title: "PHENOMENAL_dm_2022-03-18"
+author: "Daniel Alcalá"
+date: "2022-03-18"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("readxl")
+library("gt")
+library("gtsummary")
+
+theme_gtsummary_journal(journal = "jama")
+theme_gtsummary_compact()
+```
+
+## Introduction
+
+```{r}
+data01_phenomenal_dm <- read_excel(
+  'data/PHENOMENAL_basal-characteristics_2022-03-17.xlsx'
+  )
+```
+
+```{r}
+data01_phenomenal_dm %>% 
+  tbl_summary(sort = all_categorical() ~ "frequency",
+              type = all_continuous() ~ "continuous2",
+              statistic = list(all_continuous() ~ c("{N_nonmiss}",
+                                     "{median}",
+                                     "{min}, {max}"),
+                               all_categorical() ~ "{n} ({p}%)"),
+              label = c(
+                age ~ 'Age in years',
+                race ~ 'Race or ethnic group',
+                ecog ~ 'ECOG Functional Status',
+                menopausal ~ 'Menopausal status',
+                her2 ~ 'HER2 negative status confirmation',
+                er ~ 'Estrogen Receptor status',
+                # pgr ~ 'Progesterone Receptor status',
+                mri_mesurable_lesion_num ~ 'Number of measurable lesions in the MRI scan',
+                tc_mesurable_lesion_num ~ 'Number of measurable lesions in the TC scan',
+                num_metastatic_organs ~ 'Number of metastatic organs involved',
+                total_sum_measurable_lesion ~ 'Total sum of measurable lesions (MRI + TC)'
+                ),
+              include = c(age, race, ecog, menopausal, her2, er, 
+                          mri_mesurable_lesion_num, tc_mesurable_lesion_num,
+                          num_metastatic_organs, total_sum_measurable_lesion
+                          ),
+              missing = "always"
+              ) %>%
+  add_n() %>% 
+  as_gt() %>% 
+  tab_header("Table 1. Patient characteristics. FAS population") %>% 
+  tab_options(
+    table.font.size = "small"
+  )
+```
