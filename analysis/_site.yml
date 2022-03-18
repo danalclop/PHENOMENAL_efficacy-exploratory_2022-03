@@ -1,7 +1,7 @@
-name: "PHENOMENAL_efficacy-exploratory_2022-03"
+name: PHENOMENAL_efficacy-exploratory_2022-03
 output_dir: ../docs
 navbar:
-  title: "PHENOMENAL_efficacy-exploratory_2022-03"
+  title: PHENOMENAL_efficacy-exploratory_2022-03
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fab fa-github
+    text: Source code
+    href: https://github.com/danalclop/PHENOMENAL_efficacy-exploratory_2022-03
 output:
   workflowr::wflow_html:
     toc: yes
