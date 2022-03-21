@@ -8,4 +8,26 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Welcome to this online report.
+
+Results shown here reflect data retrieved as of 25 February 2022.
+
+You will find here the following content:
+
+- Tabular data showing the baseline characteristics of the 34 evaluable patients up to the data cut-off date. 
+
+- [To be added] Preliminary efficacy results showing the current status of the study's primary endpoint:
+
+    - Overall Response Rate (ORR) of intracraneal lesions as per RANO-BM criteria.
+
+- [To be added] Preliminary efficacy results showing the current status of the study's secondary endpoint
+
+    - Overall Response Rate (ORR) of intracraneal lesions as per RECIST v.1.1 criteria.
+
+    - Overall Response Rate (ORR) of extracraneal lesions as per RECIST v.1.1 criteria.
+
+    - Overall Response Rate (ORR) of all lesions (intra- and extracraneal) as per RECIST v.1.1 criteria.
+
+    - Progression-Free Survival (PFS)
+
+    - Overall Survival (OS)
