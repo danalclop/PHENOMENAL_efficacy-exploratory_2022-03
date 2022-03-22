@@ -17,15 +17,17 @@ theme_gtsummary_journal(journal = "jama")
 theme_gtsummary_compact()
 ```
 
-## Introduction
+## Cleaning of raw data [TO BE ADDED] 
 
 ```{r}
+# Read the data file
 data01_phenomenal_dm <- read_excel(
   'data/PHENOMENAL_basal-characteristics_2022-03-17.xlsx'
   )
 ```
 
 ```{r}
+# Create a table with the baseline characteristics of patients
 data01_phenomenal_dm %>% 
   tbl_summary(sort = all_categorical() ~ "frequency",
               type = all_continuous() ~ "continuous2",
@@ -36,17 +38,17 @@ data01_phenomenal_dm %>%
               label = c(
                 age ~ 'Age in years',
                 race ~ 'Race or ethnic group',
-                ecog ~ 'ECOG Functional Status',
+                ecog ~ 'ECOG functional status',
                 menopausal ~ 'Menopausal status',
                 her2 ~ 'HER2 negative status confirmation',
                 er ~ 'Estrogen Receptor status',
-                # pgr ~ 'Progesterone Receptor status',
+                pgr ~ 'Progesterone Receptor status',
                 mri_mesurable_lesion_num ~ 'Number of measurable lesions in the MRI scan',
                 tc_mesurable_lesion_num ~ 'Number of measurable lesions in the TC scan',
                 num_metastatic_organs ~ 'Number of metastatic organs involved',
                 total_sum_measurable_lesion ~ 'Total sum of measurable lesions (MRI + TC)'
                 ),
-              include = c(age, race, ecog, menopausal, her2, er, 
+              include = c(age, race, ecog, menopausal, her2, er, pgr,
                           mri_mesurable_lesion_num, tc_mesurable_lesion_num,
                           num_metastatic_organs, total_sum_measurable_lesion
                           ),
