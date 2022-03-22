@@ -1,5 +1,5 @@
 ---
-title: "PHENOMENAL_dm_2022-03-18"
+title: "PHENOMENAL | Basal characteristics table"
 author: "Daniel Alcalá"
 date: "2022-03-18"
 output: workflowr::wflow_html
