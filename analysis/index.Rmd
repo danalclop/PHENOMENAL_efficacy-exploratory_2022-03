@@ -14,7 +14,7 @@ Results shown here reflect data retrieved as of 25 February 2022.
 
 You will find here the following content:
 
-- Tabular data showing the baseline characteristics of the 34 evaluable patients up to the data cut-off date. 
+- Tabular data showing the baseline characteristics of the 34 evaluable patients up to the data cut-off date. [Click here](PHENOMENAL_dm_2022-03-18.html) to see the analysis.
 
 - [To be added] Preliminary efficacy results showing the current status of the study's primary endpoint:
 
